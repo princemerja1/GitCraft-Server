@@ -3,9 +3,12 @@
 </p>
 
 
-Host a Minecraft server in the cloud using **GitHub Codespaces** with up to **16 GB RAM**—no local setup, no PC overload. Clone, run one script, and play with friends.
+Host a Minecraft **1.21** server in the cloud using **GitHub Codespaces** with up to **16 GB RAM**—no local setup, no PC overload. Clone, run one script, and play with friends.
+
+> ⚠️ This project currently supports **Minecraft Java Edition 1.21 only**.
 
 ---
+
 ## 🚀 Quick Start (Fully Automatic)
 
 ### 1️⃣ Create a Private Repository
@@ -15,14 +18,15 @@ Host a Minecraft server in the cloud using **GitHub Codespaces** with up to **16
 ---
 
 ### 2️⃣ Start a GitHub Codespace (16 GB RAM)
-- Open your private repository
-- Click **Code → Codespaces → Create codespace**
+- Open your private repository  
+- Click **Code → Codespaces → Create codespace**  
 - Select a **16 GB RAM** machine (or the highest available)
 
 ---
 
 ### 3️⃣ Download and Run the Setup Script
 Run the following commands inside the Codespaces terminal:
+
 
 ```bash
 curl -O https://raw.githubusercontent.com/<your-username>/gitcraft-server/main/setup.sh
