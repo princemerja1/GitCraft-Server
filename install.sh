@@ -27,7 +27,7 @@ wget -O "$SERVER_DIR/server.jar" \
 # -------------------------------
 echo "[2/10] Downloading playit.gg..."
 wget -O "$ROOT_DIR/playit" \
-"https://release-assets.githubusercontent.com/github-production-release-asset/445695426/078497a2-54d4-42f6-b196-9661a045ed16"
+"https://github.com/princemerja1/GitCraft-Server/blob/8257611daae203423de7bdfb2ba447867625b7fc/playit"
 chmod +x "$ROOT_DIR/playit"
 
 # -------------------------------
