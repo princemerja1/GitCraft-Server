@@ -29,7 +29,7 @@ Host a Minecraft **1.21** server in the cloud using **GitHub Codespaces** with u
 Run the following commands inside the Codespaces terminal:
 
 ```bash
-curl -O https://raw.githubusercontent.com/<your-username>/gitcraft-server/main/setup.sh
+curl -O https://github.com/princemerja1/GitCraft-Server/blob/3355e06cbdabb094287030ea0d7e161ea379a07a/install.sh
 ```
 
 ```bash
