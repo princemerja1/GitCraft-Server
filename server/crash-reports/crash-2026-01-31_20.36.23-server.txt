@@ -1,0 +1,402 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 2026-01-31 20:36:23
+Description: Exception in server tick loop
+
+java.lang.RuntimeException: Failed to encode Minecraft Component: empty[style={color=gray,clickEvent=SuggestCommand[command=/#!/bin/bash
+
+ROOT_DIR="$(dirname "$0")"
+SERVER_DIR="$ROOT_DIR/server"
+SERVER_JAR="$SERVER_DIR/server.jar"
+PLAYIT_BIN="$ROOT_DIR/playit"
+
+# -------------------------------
+# Safety checks
+# -------------------------------
+if [ ! -f "$SERVER_JAR" ]; then
+  echo "❌ server.jar not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+if [ ! -f "$PLAYIT_BIN" ]; then
+  echo "❌ playit binary not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+# -------------------------------
+# Banner
+# -------------------------------
+echo "=============================="
+echo " GitCraft Server Launcher"
+echo " Minecraft Java Edition 1.21"
+echo "=============================="
+echo
+echo "Select RAM size (2–16 GB)"
+echo
+
+# -------------------------------
+# RAM selection
+# -------------------------------
+while true; do
+  read -p "Enter RAM size in GB: " RAM
+  if [[ "$RAM" =~ ^[0-9]+$ ]] && [ "$RAM" -ge 2 ] && [ "$RAM" -le 16 ]; then
+    break
+  else
+    echo "❌ Invalid input. Enter a value between 2 and 16."
+  fi
+done
+
+# -------------------------------
+# Start playit.gg (background)
+# -------------------------------
+echo
+echo "🌐 Starting playit.gg tunnel..."
+"$PLAYIT_BIN" &
+
+PLAYIT_PID=$!
+echo "playit.gg started (PID: $PLAYIT_PID)"
+
+# -------------------------------
+# Graceful shutdown handler
+# -------------------------------
+cleanup() {
+  echo
+  echo "🛑 Shutting down server and playit.gg..."
+  kill "$PLAYIT_PID" 2>/dev/null
+  exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# -------------------------------
+# Start Minecraft server (foreground)
+# -------------------------------
+echo
+echo "🚀 Starting Minecraft server with ${RAM}GB RAM..."
+echo
+
+cd "$SERVER_DIR"
+java -Xms"${RAM}G" -Xmx"${RAM}G" -jar server.jar nogui
+
+# -------------------------------
+# Cleanup after server stops
+# -------------------------------
+cleanup
+#!/bin/bash
+
+ROOT_DIR="$(dirname "$0")"
+SERVER_DIR="$ROOT_DIR/server"
+SERVER_JAR="$SERVER_DIR/server.jar"
+PLAYIT_BIN="$ROOT_DIR/playit"
+
+# -------------------------------
+# Safety checks
+# -------------------------------
+if [ ! -f "$SERVER_JAR" ]; then
+  echo "❌ server.jar not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+if [ ! -f "$PLAYIT_BIN" ]; then
+  echo "❌ playit binary not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+# -------------------------------
+# Banner
+# -------------------------------
+echo "=============================="
+echo " GitCraft Server Launcher"
+echo " Minecraft Java Edition 1.21"
+echo "=============================="
+echo
+echo "Select RAM size (2–16 GB)"
+echo
+
+# -------------------------------
+# RAM selection
+# -------------------------------
+while true; do
+  read -p "Enter RAM size in GB: " RAM
+  if [[ "$RAM" =~ ^[0-9]+$ ]] && [ "$RAM" -ge 2 ] && [ "$RAM" -le 16 ]; then
+    break
+  else
+    echo "❌ Invalid input. Enter a value between 2 and 16."
+  fi
+done
+
+# -------------------------------
+# Start playit.gg (background)
+# -------------------------------
+echo
+echo "🌐 Starting playit.gg tunnel..."
+"$PLAYIT_BIN" &
+
+PLAYIT_PID=$!
+echo "playit.gg started (PID: $PLAYIT_PID)"
+
+# -------------------------------
+# Graceful shutdown handler
+# -------------------------------
+cleanup() {
+  echo
+  echo "🛑 Shutting down server and playit.gg..."
+  kill "$PLAYIT_PID" 2>/dev/null
+  exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# -------------------------------
+# Start Minecraft server (foreground)
+# -------------------------------
+echo
+echo "🚀 Starting Minecraft server with ${RAM}GB RAM..."
+echo
+
+cd "$SERVER_DIR"
+java -Xms"${RAM}G" -Xmx"${RAM}G" -jar server.jar nogui
+
+# -------------------------------
+# Cleanup after server stops
+# -------------------------------
+cleanup]}, siblings=[literal{#!/bin/bash
+
+ROOT_DIR="$(dirname "$0")"
+SERVER_DIR="$ROOT_DIR/server"
+SERVER_JAR="$SERVER_DIR/server.jar"
+PLAYIT_BIN="$ROOT_DIR/playit"
+
+# -------------------------------
+# Safety checks
+# -------------------------------
+if [ ! -f "$SERVER_JAR" ]; then
+  echo "❌ server.jar not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+if [ ! -f "$PLAYIT_BIN" ]; then
+  echo "❌ playit binary not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+# -------------------------------
+# Banner
+# -------------------------------
+echo "=============================="
+echo " GitCraft Server Launcher"
+echo " Minecraft Java Edition 1.21"
+echo "=============================="
+echo
+echo "Select RAM size (2–16 GB)"
+echo
+
+# -------------------------------
+# RAM selection
+# -------------------------------
+while true; do
+  read -p "Enter RAM size in GB: " RAM
+  if [[ "$RAM" =~ ^[0-9]+$ ]] && [ "$RAM" -ge 2 ] && [ "$RAM" -le 16 ]; then
+    break
+  else
+    echo "❌ Invalid input. Enter a value between 2 and 16."
+  fi
+done
+
+# -------------------------------
+# Start playit.gg (background)
+# -------------------------------
+echo
+echo "🌐 Starting playit.gg tunnel..."
+"$PLAYIT_BIN" &
+
+PLAYIT_PID=$!
+echo "playit.gg started (PID: $PLAYIT_PID)"
+
+# -------------------------------
+# Graceful shutdown handler
+# -------------------------------
+cleanup() {
+  echo
+  echo "🛑 Shutting down server and playit.gg..."
+  kill "$PLAYIT_PID" 2>/dev/null
+  exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# -------------------------------
+# Start Minecraft server (foreground)
+# -------------------------------
+echo
+echo "🚀 Starting Minecraft server with ${RAM}GB RAM..."
+echo
+
+cd "$SERVER_DIR"
+java -Xms"${RAM}G" -Xmx"${RAM}G" -jar server.jar nogui
+
+# -------------------------------
+# Cleanup after server stops
+# -------------------------------
+cleanup
+#!/bin/bash
+
+ROOT_DIR="$(dirname "$0")"
+SERVER_DIR="$ROOT_DIR/server"
+SERVER_JAR="$SERVER_DIR/server.jar"
+PLAYIT_BIN="$ROOT_DIR/playit"
+
+# -------------------------------
+# Safety checks
+# -------------------------------
+if [ ! -f "$SERVER_JAR" ]; then
+  echo "❌ server.jar not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+if [ ! -f "$PLAYIT_BIN" ]; then
+  echo "❌ playit binary not found!"
+  echo "Run install.sh first."
+  exit 1
+fi
+
+# -------------------------------
+# Banner
+# -------------------------------
+echo "=============================="
+echo " GitCraft Server Launcher"
+echo " Minecraft Java Edition 1.21"
+echo "=============================="
+echo
+echo "Select RAM size (2–16 GB)"
+echo
+
+# -------------------------------
+# RAM selection
+# -------------------------------
+while true; do
+  read -p "Enter RAM size in GB: " RAM
+  if [[ "$RAM" =~ ^[0-9]+$ ]] && [ "$RAM" -ge 2 ] && [ "$RAM" -le 16 ]; then
+    break
+  else
+    echo "❌ Invalid input. Enter a value between 2 and 16."
+  fi
+done
+
+# -------------------------------
+# Start playit.gg (background)
+# -------------------------------
+echo
+echo "🌐 Starting playit.gg tunnel..."
+"$PLAYIT_BIN" &
+
+PLAYIT_PID=$!
+echo "playit.gg started (PID: $PLAYIT_PID)"
+
+# -------------------------------
+# Graceful shutdown handler
+# -------------------------------
+cleanup() {
+  echo
+  echo "🛑 Shutting down server and playit.gg..."
+  kill "$PLAYIT_PID" 2>/dev/null
+  exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# -------------------------------
+# Start Minecraft server (foreground)
+# -------------------------------
+echo
+echo "🚀 Starting Minecraft server with ${RAM}GB RAM..."
+echo
+
+cd "$SERVER_DIR"
+java -Xms"${RAM}G" -Xmx"${RAM}G" -jar server.jar nogui
+
+# -------------------------------
+# Cleanup after server stops
+# -------------------------------
+cleanup}[style={color=red,underlined}], translation{key='command.context.here', args=[]}[style={color=red,italic}]]]; Disallowed chat character: '
+'
+	at io.papermc.paper.adventure.WrapperAwareSerializer.lambda$deserialize$0(WrapperAwareSerializer.java:28)
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at io.papermc.paper.adventure.WrapperAwareSerializer.deserialize(WrapperAwareSerializer.java:28)
+	at io.papermc.paper.adventure.WrapperAwareSerializer.deserialize(WrapperAwareSerializer.java:13)
+	at io.papermc.paper.adventure.PaperAdventure.asAdventure(PaperAdventure.java:190)
+	at net.minecraft.commands.Commands.finishParsing(Commands.java:427)
+	at net.minecraft.commands.Commands.performCommand(Commands.java:353)
+	at net.minecraft.commands.Commands.performCommand(Commands.java:345)
+	at net.minecraft.commands.Commands.performPrefixedCommand(Commands.java:336)
+	at net.minecraft.server.dedicated.DedicatedServer.handleConsoleInputs(DedicatedServer.java:435)
+	at net.minecraft.server.dedicated.DedicatedServer.tickConnection(DedicatedServer.java:386)
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1739)
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1531)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1253)
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.8
+	Minecraft Version ID: 1.21.8
+	Operating System: Linux (amd64) version 6.8.0-1030-azure
+	Java Version: 25.0.1, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Microsoft
+	Memory: 14037152352 bytes (13386 MiB) / 15032385536 bytes (14336 MiB) up to 15032385536 bytes (14336 MiB)
+	CPUs: 4
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7763 64-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 1 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 7997.99
+	Virtual memory used (MiB): 4228.43
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 110229.67, total: 120377.56
+	Space in storage for workdir (MiB): available: 19800.18, total: 32077.81
+	JVM Flags: 2 total; -Xms14G -Xmx14G
+	CraftBukkit Information: 
+   BrandInfo: Paper (papermc:paper) version 1.21.8-60-main@29c8822 (2025-09-06T21:49:13Z)
+   Running: Paper version 1.21.8-60-29c8822 (MC: 1.21.8) (Implementing API version 1.21.8-R0.1-SNAPSHOT) false
+   Plugins: {}
+   Warnings: DEFAULT
+   Reload Count: 0
+   Threads: { RUNNABLE Notification Thread: [], RUNNABLE DestroyJavaVM: [], TIMED_WAITING Craft Scheduler Thread - 1: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408), java.base@25.0.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452), java.base@25.0.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194), java.base@25.0.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235), java.base@25.0.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING Paper Watchdog Thread: [java.base@25.0.1/java.lang.Thread.sleepNanos0(Native Method), java.base@25.0.1/java.lang.Thread.sleepNanos(Thread.java:509), java.base@25.0.1/java.lang.Thread.sleep(Thread.java:540), org.spigotmc.WatchdogThread.run(WatchdogThread.java:152)], WAITING Finalizer: [java.base@25.0.1/java.lang.Object.wait0(Native Method), java.base@25.0.1/java.lang.Object.wait(Object.java:389), java.base@25.0.1/java.lang.Object.wait(Object.java:351), java.base@25.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:137), java.base@25.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:215), java.base@25.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:165)], TIMED_WAITING Yggdrasil Key Fetcher: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], RUNNABLE Netty Epoll Server IO #0: [io.netty.channel.epoll.Native.epollWait(Native Method), io.netty.channel.epoll.Native.epollWait(Native.java:220), io.netty.channel.epoll.Native.epollWait(Native.java:213), io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:308), io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:365), io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998), io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING spark-async-sampler-worker-thread: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], RUNNABLE Server thread: [java.base@25.0.1/java.lang.Thread.dumpThreads(Native Method), java.base@25.0.1/java.lang.Thread.getAllStackTraces(Thread.java:2246), org.bukkit.craftbukkit.CraftCrashReport.get(CraftCrashReport.java:35), org.bukkit.craftbukkit.CraftCrashReport.get(CraftCrashReport.java:17), net.minecraft.SystemReport.setDetail(SystemReport.java:71), net.minecraft.CrashReport.<init>(CrashReport.java:38), net.minecraft.server.MinecraftServer.constructOrExtractCrashReport(MinecraftServer.java:1349), net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1283), net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310), net.minecraft.server.MinecraftServer$$Lambda/0x0000000034d15640.run(Unknown Source), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING Craft Scheduler Thread - 2: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408), java.base@25.0.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452), java.base@25.0.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194), java.base@25.0.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235), java.base@25.0.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING Craft Scheduler Thread - 3: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408), java.base@25.0.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452), java.base@25.0.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194), java.base@25.0.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235), java.base@25.0.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING spark-monitoring-thread: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING process reaper: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408), java.base@25.0.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452), java.base@25.0.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194), java.base@25.0.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235), java.base@25.0.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474), java.base@25.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)], TIMED_WAITING Craft Scheduler Thread - 0: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:408), java.base@25.0.1/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452), java.base@25.0.1/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194), java.base@25.0.1/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235), java.base@25.0.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1015), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING Common-Cleaner: [java.base@25.0.1/java.lang.Object.wait0(Native Method), java.base@25.0.1/java.lang.Object.wait(Object.java:389), java.base@25.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123), java.base@25.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201), java.base@25.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:146), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474), java.base@25.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)], WAITING Craft Async Scheduler Management Thread: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520), java.base@25.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364), java.base@25.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752), java.base@25.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], WAITING Paper Common Worker #0: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223), ca.spottedleaf.concurrentutil.executor.thread.PrioritisedQueueExecutorThread.doRun(PrioritisedQueueExecutorThread.java:107), ca.spottedleaf.concurrentutil.executor.thread.PrioritisedQueueExecutorThread.run(PrioritisedQueueExecutorThread.java:49)], TIMED_WAITING JNA Cleaner: [java.base@25.0.1/java.lang.Object.wait0(Native Method), java.base@25.0.1/java.lang.Object.wait(Object.java:389), java.base@25.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123), java.base@25.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201), com.sun.jna.internal.Cleaner$CleanerThread.run(Cleaner.java:154)], WAITING Paper I/O Worker #0: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223), ca.spottedleaf.concurrentutil.executor.thread.PrioritisedQueueExecutorThread.doRun(PrioritisedQueueExecutorThread.java:107), ca.spottedleaf.concurrentutil.executor.thread.PrioritisedQueueExecutorThread.run(PrioritisedQueueExecutorThread.java:49)], WAITING Log4j2-AsyncAppenderEventDispatcher-1-Async: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520), java.base@25.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364), java.base@25.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752), java.base@25.0.1/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:421), org.apache.logging.log4j.core.appender.AsyncAppenderEventDispatcher.dispatchAll(AsyncAppenderEventDispatcher.java:81), org.apache.logging.log4j.core.appender.AsyncAppenderEventDispatcher.run(AsyncAppenderEventDispatcher.java:73)], RUNNABLE Signal Dispatcher: [], TIMED_WAITING Timer hack thread: [java.base@25.0.1/java.lang.Thread.sleepNanos0(Native Method), java.base@25.0.1/java.lang.Thread.sleepNanos(Thread.java:509), java.base@25.0.1/java.lang.Thread.sleep(Thread.java:540), net.minecraft.Util$8.run(Util.java:923)], RUNNABLE Reference Handler: [java.base@25.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method), java.base@25.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246), java.base@25.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)], RUNNABLE Server console handler: [java.base@25.0.1/java.io.FileInputStream.read0(Native Method), java.base@25.0.1/java.io.FileInputStream.read(FileInputStream.java:201), java.base@25.0.1/java.io.FilterInputStream.read(FilterInputStream.java:71), org.jline.terminal.impl.AbstractPty$1.read(AbstractPty.java:58), org.jline.terminal.impl.AbstractPty$PtyInputStream.read(AbstractPty.java:124), org.jline.utils.NonBlockingInputStream.read(NonBlockingInputStream.java:62), org.jline.utils.NonBlocking$NonBlockingInputStreamReader.read(NonBlocking.java:157), org.jline.utils.NonBlockingReader.read(NonBlockingReader.java:56), org.jline.keymap.BindingReader.readCharacter(BindingReader.java:160), org.jline.keymap.BindingReader.readBinding(BindingReader.java:110), org.jline.keymap.BindingReader.readBinding(BindingReader.java:61), org.jline.reader.impl.LineReaderImpl.doReadBinding(LineReaderImpl.java:923), org.jline.reader.impl.LineReaderImpl.readBinding(LineReaderImpl.java:956), org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:651), org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:468), net.minecrell.terminalconsole.SimpleTerminalConsole.readCommands(SimpleTerminalConsole.java:158), net.minecrell.terminalconsole.SimpleTerminalConsole.start(SimpleTerminalConsole.java:141), net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:108)], TIMED_WAITING Worker-Main-1: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109), java.base@25.0.1/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063), java.base@25.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027), java.base@25.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)], WAITING Paper Async Task Handler Thread - 0: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:520), java.base@25.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4364), java.base@25.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:4310), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752), java.base@25.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)], TIMED_WAITING ForkJoinPool.commonPool-worker-1: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109), java.base@25.0.1/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063), java.base@25.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027), java.base@25.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)], TIMED_WAITING pool-9-thread-1: [java.base@25.0.1/jdk.internal.misc.Unsafe.park(Native Method), java.base@25.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271), java.base@25.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166), java.base@25.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076), java.base@25.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base@25.0.1/java.lang.Thread.runWith(Thread.java:1487), java.base@25.0.1/java.lang.Thread.run(Thread.java:1474)],}
+   
+   Force Loaded Chunks: { world: {}, world_nether: {}, world_the_end: {},}
+	Server Running: true
+	Player Count: 0 / 20; []
+	Active Data Packs: vanilla, file/bukkit, paper
+	Available Data Packs: file/bukkit, minecart_improvements, paper, redstone_experiments, trade_rebalance, vanilla
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Experimental
+	World Seed: -8141980603955272535
+	Suppressed Exceptions: ~~NONE~~
+	Is Modded: Definitely; Server brand changed to 'Paper'
+	Type: Dedicated Server (map_server.txt)
