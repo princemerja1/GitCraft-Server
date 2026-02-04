@@ -1,295 +1,96 @@
-[04:52:04] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.1+8-LTS; Microsoft Microsoft-12574222) on Linux 6.8.0-1030-azure (amd64)
-[04:52:04] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.8-60-main@29c8822 (2025-09-06T21:49:13Z) for Minecraft 1.21.8
-[04:52:04] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[04:52:04] [ServerMain/INFO]: [PluginInitializerManager] Initialized 0 plugins
-[04:52:09] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[04:52:11] [ServerMain/INFO]: Loaded 1407 recipes
-[04:52:11] [ServerMain/INFO]: Loaded 1520 advancements
-[04:52:11] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
-[04:52:12] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 381.4ms
-[04:52:12] [Server thread/INFO]: Starting minecraft server version 1.21.8
-[04:52:12] [Server thread/INFO]: Loading properties
-[04:52:12] [Server thread/INFO]: This server is running Paper version 1.21.8-60-main@29c8822 (2025-09-06T21:49:13Z) (Implementing API version 1.21.8-R0.1-SNAPSHOT)
-[04:52:12] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[04:52:12] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[04:52:12] [Server thread/INFO]: Using 4 threads for Netty based IO
-[04:52:13] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
-[04:52:13] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[04:52:13] [Server thread/INFO]: Default game type: SURVIVAL
-[04:52:13] [Server thread/INFO]: Generating keypair
-[04:52:13] [Server thread/INFO]: Starting Minecraft server on *:25565
-[04:52:13] [Server thread/INFO]: Using epoll channel type
-[04:52:13] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
-[04:52:13] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
-[04:52:13] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[04:52:13] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[04:52:13] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[04:52:13] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[04:52:13] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[04:52:13] [Server thread/INFO]: Preparing level "world"
-[04:52:14] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[04:52:14] [Server thread/INFO]: Preparing spawn area: 0%
-[04:52:14] [Server thread/INFO]: Preparing spawn area: 2%
-[04:52:15] [Server thread/INFO]: Time elapsed: 629 ms
-[04:52:15] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[04:52:15] [Server thread/INFO]: Preparing spawn area: 0%
-[04:52:15] [Server thread/INFO]: Preparing spawn area: 8%
-[04:52:15] [Server thread/INFO]: Time elapsed: 616 ms
-[04:52:15] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[04:52:15] [Server thread/INFO]: Preparing spawn area: 0%
-[04:52:15] [Server thread/INFO]: Time elapsed: 180 ms
-[04:52:16] [Server thread/INFO]: [spark] Starting background profiler...
-[04:52:17] [Server thread/INFO]: Done preparing level "world" (3.092s)
-[04:52:17] [Server thread/INFO]: Running delayed init tasks
-[04:52:17] [Server thread/INFO]: Done (14.950s)! For help, type "help"
-[04:58:23] [User Authenticator #0/INFO]: UUID of player mayank is 67c143f6-df97-3cc7-9d86-74b8824b417c
-[04:58:24] [Server thread/INFO]: mayank joined the game
-[04:58:24] [Server thread/INFO]: mayank[/127.190.78.117:44637] logged in with entity id 21 at ([world]-56.5, 78.0, 12.5)
-[04:58:44] [Server thread/INFO]: Set the time to 1000
-[04:58:50] [Server thread/INFO]: mayank was killed
-[04:58:50] [Server thread/INFO]: Killed mayank
-[04:59:32] [Server thread/INFO]: Teleported mayank to -64.000000, 76.000000, 30.500000
-[04:59:38] [Server thread/INFO]: Teleported mayank to -64.000000, 76.000000, 1000.500000
-[04:59:42] [Server thread/INFO]: Teleported mayank to -64.000000, 76.000000, 10.500000
-[05:00:56] [Server thread/INFO]: Made mayank a server operator
-[05:01:19] [Server thread/INFO]: Unknown game mode: 
-gamemode @a 2<--[HERE]
-[05:01:23] [Server thread/INFO]: --------- Help: Index ---------------------------------
-[05:01:23] [Server thread/INFO]: Use /help [n] to get page n of help.
-[05:01:23] [Server thread/INFO]: Aliases: Lists command aliases
-[05:01:23] [Server thread/INFO]: Bukkit: All commands for Bukkit
-[05:01:23] [Server thread/INFO]: Minecraft: All commands for Minecraft
-[05:01:23] [Server thread/INFO]: Paper: All commands for Paper
-[05:01:23] [Server thread/INFO]: /about: Gets the version of this server including any plugins in use
-[05:01:23] [Server thread/INFO]: /advancement: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /attribute: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /ban: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /ban-ip: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /banlist: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /bossbar: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /bukkit:about: Gets the version of this server including any plugins in use
-[05:01:23] [Server thread/INFO]: /bukkit:pl: Gets a list of plugins running on the server
-[05:01:23] [Server thread/INFO]: /bukkit:plugins: Gets a list of plugins running on the server
-[05:01:23] [Server thread/INFO]: /bukkit:ver: Gets the version of this server including any plugins in use
-[05:01:23] [Server thread/INFO]: /bukkit:version: Gets the version of this server including any plugins in use
-[05:01:23] [Server thread/INFO]: /clear: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /clone: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /damage: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /data: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /datapack: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /debug: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /defaultgamemode: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /deop: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /dialog: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /difficulty: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /effect: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /enchant: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /execute: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /experience: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /fill: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /fillbiome: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /forceload: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /function: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /gamemode: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /gamerule: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /give: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /help: Shows the help menu
-[05:01:23] [Server thread/INFO]: /item: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /jfr: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /kick: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /kill: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /list: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /locate: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /loot: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /me: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:advancement: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:attribute: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:ban: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:ban-ip: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:banlist: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:bossbar: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:clear: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:clone: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:damage: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:data: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:datapack: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:debug: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:defaultgamemode: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:deop: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:dialog: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:difficulty: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:effect: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:enchant: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:execute: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:experience: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:fill: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:fillbiome: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:forceload: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:function: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:gamemode: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:gamerule: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:give: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:help: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:item: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:jfr: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:kick: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:kill: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:list: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:locate: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:loot: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:me: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:msg: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:op: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:pardon: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:pardon-ip: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:particle: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:perf: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:place: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:playsound: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:random: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:recipe: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:reload: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:return: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:ride: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:rotate: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:save-all: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:save-off: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:save-on: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:say: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:schedule: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:scoreboard: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:seed: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:setblock: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:setidletimeout: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:setworldspawn: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:spawnpoint: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:spectate: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:spreadplayers: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:stop: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:stopsound: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:summon: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:tag: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:team: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:teammsg: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:teleport: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:tell: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:tellraw: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:test: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:tick: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:time: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:title: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:tm: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:tp: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:transfer: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:trigger: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:version: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:w: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:waypoint: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:weather: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:whitelist: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:worldborder: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /minecraft:xp: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /msg: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /mspt: View server tick times
-[05:01:23] [Server thread/INFO]: /op: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /paper: Paper related commands
-[05:01:23] [Server thread/INFO]: /paper:spark: 
-[05:01:23] [Server thread/INFO]: /pardon: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /pardon-ip: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /particle: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /perf: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /pl: Gets a list of plugins running on the server
-[05:01:23] [Server thread/INFO]: /place: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /playsound: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /plugins: Gets a list of plugins running on the server
-[05:01:23] [Server thread/INFO]: /random: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /recipe: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /reload: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /restart: Restarts the server
-[05:01:23] [Server thread/INFO]: /return: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /ride: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /rotate: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /save-all: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /save-off: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /save-on: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /say: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /schedule: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /scoreboard: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /seed: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /setblock: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /setidletimeout: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /setworldspawn: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /spark: 
-[05:01:23] [Server thread/INFO]: /spawnpoint: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /spectate: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /spigot: Spigot related commands
-[05:01:23] [Server thread/INFO]: /spreadplayers: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /stop: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /stopsound: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /summon: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tag: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /team: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /teammsg: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /teleport: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tell: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tellraw: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /test: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tick: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /time: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /timings: Manages Spigot Timings data to see performance of the server.
-[05:01:23] [Server thread/INFO]: /title: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tm: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tp: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /tps: Gets the current ticks per second for the server
-[05:01:23] [Server thread/INFO]: /transfer: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /trigger: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /ver: Gets the version of this server including any plugins in use
-[05:01:23] [Server thread/INFO]: /version: Gets the version of this server including any plugins in use
-[05:01:23] [Server thread/INFO]: /w: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /waypoint: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /weather: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /whitelist: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /worldborder: A Mojang provided command.
-[05:01:23] [Server thread/INFO]: /xp: A Mojang provided command.
-[05:01:35] [Server thread/INFO]: Unknown or incomplete command, see below for error
-gamemode<--[HERE]
-[05:01:46] [Server thread/INFO]: Unknown game mode: help
-...emode help<--[HERE]
-[05:01:53] [Server thread/INFO]: --------- Help: /gamemode -----------------------------
-[05:01:53] [Server thread/INFO]: Description: A Mojang provided command.
-[05:01:53] [Server thread/INFO]: Usage: gamemode
-[05:02:14] [Server thread/INFO]: [STDOUT] [org.spigotmc.RestartCommand] Startup script './start.sh' does not exist! Stopping server.
-[05:02:14] [Server thread/INFO]: mayank lost connection: Server is restarting
-[05:02:14] [Server thread/INFO]: mayank left the game
-[05:02:14] [Server thread/INFO]: Stopping server
-[05:02:14] [Server thread/INFO]: Saving players
-[05:02:14] [Server thread/INFO]: Saving worlds
-[05:02:14] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[05:02:14] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[05:02:14] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[05:02:14] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Saved 2171 block chunks, 730 entity chunks, 4 poi chunks in world 'world' in 2.13s
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
-[05:02:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Saved 2 block chunks, 5 entity chunks, 0 poi chunks in world 'world_nether' in 0.01s
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
-[05:02:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.01s
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
-[05:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
-[05:02:16] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[05:02:16] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[05:02:16] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[05:02:16] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[05:02:16] [Server thread/INFO]: Waiting for all RegionFile I/O tasks to complete...
-[05:02:16] [Server thread/INFO]: All RegionFile I/O tasks to complete
-[05:02:16] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
-[05:02:16] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+[04:01:42] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.1+8-LTS; Microsoft Microsoft-12574222) on Linux 6.8.0-1030-azure (amd64)
+[04:01:42] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.8-60-main@29c8822 (2025-09-06T21:49:13Z) for Minecraft 1.21.8
+[04:01:43] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[04:01:43] [ServerMain/INFO]: [PluginInitializerManager] Initialized 0 plugins
+[04:01:43] [Paper Plugin Remapper Thread - 1/INFO]: [ReobfServer] Remapping server...
+[04:01:50] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[04:01:50] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
+[04:01:50] [ServerMain/INFO]: Found new data pack paper, loading it automatically
+[04:01:51] [ServerMain/INFO]: No existing world data, creating new world
+[04:01:52] [Paper Plugin Remapper Thread - 1/INFO]: [ReobfServer] Done remapping server in 8743ms.
+[04:01:52] [ServerMain/INFO]: Loaded 1407 recipes
+[04:01:52] [ServerMain/INFO]: Loaded 1520 advancements
+[04:01:52] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[04:01:53] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 386.7ms
+[04:01:53] [Server thread/INFO]: Starting minecraft server version 1.21.8
+[04:01:53] [Server thread/INFO]: Loading properties
+[04:01:53] [Server thread/INFO]: This server is running Paper version 1.21.8-60-main@29c8822 (2025-09-06T21:49:13Z) (Implementing API version 1.21.8-R0.1-SNAPSHOT)
+[04:01:53] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[04:01:53] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[04:01:53] [Server thread/INFO]: Using 4 threads for Netty based IO
+[04:01:53] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[04:01:53] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[04:01:54] [Server thread/INFO]: Default game type: SURVIVAL
+[04:01:54] [Server thread/INFO]: Generating keypair
+[04:01:54] [Server thread/INFO]: Starting Minecraft server on *:25565
+[04:01:54] [Server thread/INFO]: Using epoll channel type
+[04:01:54] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[04:01:54] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[04:01:54] [Server thread/INFO]: Preparing level "world"
+[04:02:06] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[04:02:06] [Server thread/INFO]: Preparing spawn area: 2%
+[04:02:06] [Server thread/INFO]: Preparing spawn area: 2%
+[04:02:07] [Server thread/INFO]: Preparing spawn area: 2%
+[04:02:07] [Server thread/INFO]: Preparing spawn area: 2%
+[04:02:08] [Server thread/INFO]: Preparing spawn area: 8%
+[04:02:08] [Server thread/INFO]: Preparing spawn area: 18%
+[04:02:09] [Server thread/INFO]: Preparing spawn area: 18%
+[04:02:09] [Server thread/INFO]: Preparing spawn area: 18%
+[04:02:10] [Server thread/INFO]: Preparing spawn area: 51%
+[04:02:10] [Server thread/INFO]: Preparing spawn area: 51%
+[04:02:11] [Server thread/INFO]: Preparing spawn area: 59%
+[04:02:11] [Server thread/INFO]: Preparing spawn area: 59%
+[04:02:12] [Server thread/INFO]: Preparing spawn area: 75%
+[04:02:12] [Server thread/INFO]: Time elapsed: 6227 ms
+[04:02:12] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[04:02:12] [Server thread/INFO]: Preparing spawn area: 2%
+[04:02:13] [Server thread/INFO]: Preparing spawn area: 8%
+[04:02:13] [Server thread/INFO]: Preparing spawn area: 36%
+[04:02:14] [Server thread/INFO]: Preparing spawn area: 51%
+[04:02:14] [Server thread/INFO]: Time elapsed: 1608 ms
+[04:02:14] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[04:02:14] [Server thread/INFO]: Preparing spawn area: 2%
+[04:02:14] [Server thread/INFO]: Preparing spawn area: 51%
+[04:02:14] [Server thread/INFO]: Time elapsed: 582 ms
+[04:02:14] [Server thread/INFO]: [spark] Starting background profiler...
+[04:02:15] [Server thread/INFO]: Done preparing level "world" (20.720s)
+[04:02:15] [Server thread/INFO]: Running delayed init tasks
+[04:02:15] [Server thread/INFO]: Done (33.071s)! For help, type "help"
+[04:02:15] [Server thread/INFO]: *************************************************************************************
+[04:02:15] [Server thread/INFO]: This is the first time you're starting this server.
+[04:02:15] [Server thread/INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[04:02:15] [Server thread/INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[04:02:15] [Server thread/INFO]: *************************************************************************************
+[04:02:15] [Server thread/INFO]: Stopping the server
+[04:02:15] [Server thread/INFO]: Stopping server
+[04:02:15] [Server thread/INFO]: Saving players
+[04:02:15] [Server thread/INFO]: Saving worlds
+[04:02:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[04:02:15] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[04:02:15] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[04:02:15] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Saved 841 block chunks, 49 entity chunks, 1 poi chunks in world 'world' in 0.87s
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
+[04:02:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Saved 841 block chunks, 49 entity chunks, 0 poi chunks in world 'world_nether' in 0.35s
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
+[04:02:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[04:02:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[04:02:17] [Server thread/INFO]: [ChunkHolderManager] Saved 841 block chunks, 49 entity chunks, 0 poi chunks in world 'world_the_end' in 0.36s
+[04:02:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
+[04:02:17] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
+[04:02:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[04:02:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[04:02:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[04:02:17] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[04:02:17] [Server thread/INFO]: Waiting for all RegionFile I/O tasks to complete...
+[04:02:17] [Server thread/INFO]: All RegionFile I/O tasks to complete
+[04:02:17] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[04:02:17] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
