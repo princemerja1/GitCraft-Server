@@ -33,16 +33,16 @@ curl -O https://github.com/princemerja1/GitCraft-Server/blob/3355e06cbdabb094287
 ```
 
 ```bash
-chmod +x setup.sh
+chmod +x install.sh
 ```
 
 ```bash
-./setup.sh
+./install.sh
 ```
 
 ---
 
-## ⚙️ What `setup.sh` Does
+## ⚙️ What `install.sh` Does
 - Downloads the **latest Minecraft server** of your choice (**Vanilla or Paper**)
 - Sets up a **complete Minecraft server structure**
 - Installs **essential performance plugins** for a lag-free experience
